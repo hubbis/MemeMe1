@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-V6-0YT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-m6-xKk">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="U18-9u-9rV">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="i6q-sX-iDc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kUe-m6-xKk" secondAttribute="trailing" constant="-16" id="3kF-Bs-jWN"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="536" id="6j8-oq-L66"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="EGR-yP-oYH"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="MKH-9Q-QwG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xc1-V6-0YT" secondAttribute="trailing" constant="-16" id="OQL-f3-JeL"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="xc1-V6-0YT" secondAttribute="bottom" id="W5U-gN-tBx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kUe-m6-xKk" secondAttribute="bottom" id="X0z-1D-xgp"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="wmW-ZK-fL0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagePickerView" destination="xc1-V6-0YT" id="iM4-es-pjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
