@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,14 +22,14 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-m6-xKk">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="U18-9u-9rV">
+                                    <barButtonItem title="Pick" width="100" id="U18-9u-9rV">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="i6q-sX-iDc"/>
+                                            <action selector="pickAnImageFromAlbum:" destination="vXZ-lx-hvc" id="Ffp-kU-2cb"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="NbG-OH-cnJ">
+                                    <barButtonItem title="Camera" width="100" id="NbG-OH-cnJ">
                                         <connections>
-                                            <action selector="pickAnImageFromCameraButton:" destination="vXZ-lx-hvc" id="NgZ-dZ-d9B"/>
+                                            <action selector="pickAnImageFromCamera:" destination="vXZ-lx-hvc" id="H5e-T5-p5x"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -38,14 +37,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kUe-m6-xKk" secondAttribute="trailing" constant="-16" id="3kF-Bs-jWN"/>
-                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="536" id="6j8-oq-L66"/>
-                            <constraint firstItem="xc1-V6-0YT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="EGR-yP-oYH"/>
-                            <constraint firstItem="xc1-V6-0YT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="MKH-9Q-QwG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xc1-V6-0YT" secondAttribute="trailing" constant="-16" id="OQL-f3-JeL"/>
-                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="xc1-V6-0YT" secondAttribute="bottom" id="W5U-gN-tBx"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kUe-m6-xKk" secondAttribute="bottom" id="X0z-1D-xgp"/>
-                            <constraint firstItem="kUe-m6-xKk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="wmW-ZK-fL0"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="9NM-mN-Q7X"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="BbV-hR-lEi"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="CaY-fd-wVt"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="leading" secondItem="kUe-m6-xKk" secondAttribute="leading" id="Rx2-4X-K0R"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="xc1-V6-0YT" secondAttribute="bottom" id="fSb-Qq-taF"/>
+                            <constraint firstAttribute="trailing" secondItem="kUe-m6-xKk" secondAttribute="trailing" id="r1r-8n-T8i"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="trailing" secondItem="kUe-m6-xKk" secondAttribute="trailing" id="vRy-n4-Gf7"/>
                         </constraints>
                     </view>
                     <connections>

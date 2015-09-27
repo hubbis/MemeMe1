@@ -25,12 +25,7 @@ UINavigationControllerDelegate{
     
     @IBOutlet weak var imagePickerView: UIImageView!
     
-    @IBAction func pickAnImageFromCameraButton(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-    }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -43,6 +38,12 @@ UINavigationControllerDelegate{
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func pickAnImageFromCamera(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
 
