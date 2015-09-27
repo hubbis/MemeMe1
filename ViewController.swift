@@ -16,8 +16,21 @@ UINavigationControllerDelegate{
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+    
+        super.viewWillAppear(animated)
+     
+    }
     
     @IBOutlet weak var imagePickerView: UIImageView!
+    
+    @IBAction func pickAnImageFromCameraButton(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -33,12 +46,7 @@ UINavigationControllerDelegate{
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
 
-    @IBAction func pickAnImageFromCamera (sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-    }
-
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+   
 }
 
