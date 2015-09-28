@@ -33,10 +33,10 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-V6-0YT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="38" width="600" height="518"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="TOP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-5W-Ftg">
-                                <rect key="frame" x="16" y="47" width="568" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="TOP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-5W-Ftg">
+                                <rect key="frame" x="16" y="74" width="568" height="25"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TOP">
                                         <attributes>
@@ -47,8 +47,8 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="BOTTOM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-xq-raA">
-                                <rect key="frame" x="16" y="458" width="568" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="BOTTOM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-xq-raA">
+                                <rect key="frame" x="16" y="492" width="568" height="25"/>
                                 <attributedString key="attributedText">
                                     <fragment content="BOTTOM">
                                         <attributes>
@@ -59,18 +59,30 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-ve-TcT">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="jLo-xW-wEU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="cH1-3y-HAe">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="vXZ-lx-hvc" id="bFj-rY-X22"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DL2-5W-Ftg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0Hs-Op-QNZ"/>
-                            <constraint firstItem="DL2-5W-Ftg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="27" id="0LW-aE-8UA"/>
+                            <constraint firstItem="DL2-5W-Ftg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="54" id="0LW-aE-8UA"/>
                             <constraint firstItem="qKg-xq-raA" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0UN-86-gMN"/>
                             <constraint firstItem="xc1-V6-0YT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="GtB-Re-yMr"/>
-                            <constraint firstItem="DL2-5W-Ftg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="47" id="JHB-YA-V2Y"/>
+                            <constraint firstItem="DL2-5W-Ftg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="74" id="JHB-YA-V2Y"/>
                             <constraint firstItem="kUe-m6-xKk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="S3B-4h-Ihx"/>
                             <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="xc1-V6-0YT" secondAttribute="bottom" id="SIk-ZF-NSN"/>
-                            <constraint firstItem="xc1-V6-0YT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="XlW-gK-gfh"/>
-                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="qKg-xq-raA" secondAttribute="bottom" constant="73" id="ZCR-yD-LHJ"/>
+                            <constraint firstItem="xc1-V6-0YT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="38" id="XlW-gK-gfh"/>
+                            <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="qKg-xq-raA" secondAttribute="bottom" constant="39" id="ZCR-yD-LHJ"/>
                             <constraint firstItem="kUe-m6-xKk" firstAttribute="top" secondItem="xc1-V6-0YT" secondAttribute="bottom" id="byo-4k-bdc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xc1-V6-0YT" secondAttribute="trailing" constant="-16" id="eWQ-qN-rW5"/>
                             <constraint firstItem="DL2-5W-Ftg" firstAttribute="centerX" secondItem="xc1-V6-0YT" secondAttribute="centerX" id="ymh-WB-JJP"/>
@@ -81,13 +93,17 @@
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="qKg-xq-raA" id="LXr-ru-BE3"/>
+                        <outlet property="bottomToolbar" destination="kUe-m6-xKk" id="qEv-NE-GPQ"/>
                         <outlet property="cameraButton" destination="NbG-OH-cnJ" id="fdb-1M-gSD"/>
                         <outlet property="imagePickerView" destination="xc1-V6-0YT" id="iM4-es-pjw"/>
+                        <outlet property="shareButton" destination="cH1-3y-HAe" id="RCy-hZ-Vei"/>
+                        <outlet property="topNavigationBar" destination="DtF-ve-TcT" id="uGm-ee-Uai"/>
                         <outlet property="topText" destination="DL2-5W-Ftg" id="G00-Nw-Dnv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128" y="446"/>
         </scene>
     </scenes>
 </document>
