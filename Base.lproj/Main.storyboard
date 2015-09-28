@@ -20,7 +20,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-m6-xKk">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Pick" width="100" id="U18-9u-9rV">
+                                    <barButtonItem title="Album" width="100" id="U18-9u-9rV">
                                         <connections>
                                             <action selector="pickAnImageFromAlbum:" destination="vXZ-lx-hvc" id="Ffp-kU-2cb"/>
                                         </connections>
